@@ -643,13 +643,13 @@ Retrieved 2026-07-13, License - CC BY-SA 4.0
       class="mute-btn"
       id="muteButton"
       type="button"
-      aria-label="Unmute background music"
-      aria-pressed="false"
+      aria-label="Mute background music"
+      aria-pressed="true"
     >
-      <span class="icon" id="muteIcon">🔊</span>
-      <span id="muteLabel">Unmute</span>
+      <span class="icon" id="muteIcon">🔈</span>
+      <span id="muteLabel">Mute</span>
     </button>
-    <audio id="bgMusic" loop preload="auto" muted>
+    <audio id="bgMusic" loop preload="auto">
       <source
         src="
 https://assets.anytourl.com/uploads/babec807acf93fa0e706acba89aeab5b.mp3"
@@ -673,6 +673,9 @@ https://assets.anytourl.com/uploads/babec807acf93fa0e706acba89aeab5b.mp3"
       );
       const opinionArea = document.querySelector('.opinion-clouds');
       let animationFrameId = null;
+
+      // Start unmuted
+      setMuted(false);
 
       function setMuted(isMuted) {
         audio.muted = isMuted;
