@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>mltalic — Jay</title>
+    <title>jay</title>
+    <link rel="icon" href="https://i.imgur.com/vMOdnWQ.png" type="image/jpg" />
     <meta
       name="description"
       content="A minimal personal identity landing page for Jay."
@@ -124,9 +125,14 @@
 
       .profile-grid {
         display: grid;
-        grid-template-columns: minmax(0, 1.15fr) minmax(320px, 0.85fr);
+        grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.85fr);
         gap: 24px;
-        align-items: center;
+        align-items: start;
+      }
+
+      .profile-side {
+        display: grid;
+        gap: 16px;
       }
 
       .hero {
@@ -236,9 +242,34 @@
         box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04); */
       }
 
+      /*
+Source - https://stackoverflow.com/a/79980150
+Posted by Ietu
+Retrieved 2026-07-13, License - CC BY-SA 4.0
+*/
+
+      :root {
+        --muted: #8b93a1;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        background: #0d0f13;
+        font-family: system-ui, 'Segoe UI', sans-serif;
+        display: grid;
+        place-items: center;
+      }
+
+      .demo-wrap {
+        width: 100%;
+        max-width: 375px;
+        margin-left: 18px;
+      }
+
       .opinions-section {
-        margin-top: 18px;
-        padding-top: 8px;
+        margin-top: 0;
+        padding-top: 0;
       }
 
       .opinions-section h3 {
@@ -330,6 +361,7 @@
         border: 1px solid rgba(255, 255, 255, 0.16);
         background: rgba(5, 7, 10, 0.82);
         color: var(--text);
+        font-family: 'Inter', sans-serif;
         padding: 11px 14px;
         border-radius: 999px;
         display: inline-flex;
@@ -483,7 +515,7 @@
           <div class="hero">
             <div class="avatar-wrap">
               <img
-                src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240' viewBox='0 0 240 240'%3E%3Crect width='240' height='240' rx='120' fill='%230d1118'/%3E%3Ccircle cx='120' cy='96' r='44' fill='%23e8ebf4'/%3E%3Cellipse cx='120' cy='170' rx='62' ry='42' fill='%23cfd5e4'/%3E%3C/svg%3E"
+                src="https://i.pinimg.com/736x/bd/4e/e3/bd4ee3cf6e47b57e101e96ce09eb492f.jpg"
                 alt="Portrait placeholder for Jay"
               />
             </div>
@@ -538,66 +570,70 @@
               </a>
               <a
                 class="social-btn"
-                href="https://x.com"
+                href="https://tiktok.com"
                 target="_blank"
                 rel="noreferrer"
-                aria-label="Twitter"
+                aria-label="TikTok"
               >
-                <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
+                <i class="fa-brands fa-tiktok" aria-hidden="true"></i>
               </a>
             </div>
           </div>
 
-          <!-- Spotify -->
-          <aside class="spotify-card" aria-label="Spotify section">
-            <h2>Now Playing</h2>
-            <div class="spotify-embed">
-              <iframe
-                data-testid="embed-iframe"
-                style="border-radius: 12px"
-                src="https://open.spotify.com/embed/playlist/6n3cqYiRn6ES6E2c1ADDNl?utm_source=generator&theme=0&si=0ee7dfe12ea64edd"
-                width="75%"
-                height="152"
-                frameborder="0"
-                allowfullscreen=""
-                allow="
-                  autoplay;
-                  clipboard-write;
-                  encrypted-media;
-                  fullscreen;
-                  picture-in-picture;
-                "
-                loading="lazy"
-              ></iframe>
-            </div>
-
-            <section
-              class="opinions-section"
-              aria-label="What people think of Jay"
-            >
-              <h3>What people think of me</h3>
-              <div class="opinion-clouds">
-                <span class="opinion-cloud">emotionally intelligent</span>
-                <span class="opinion-cloud">deeply thoughtful</span>
-                <span class="opinion-cloud">makes you feel seen</span>
-                <span class="opinion-cloud">comforting to be around</span>
-                <span class="opinion-cloud">genuinely kind-hearted</span>
-                <span class="opinion-cloud">appreciative</span>
-                <span class="opinion-cloud">compassionate</span>
-                <span class="opinion-cloud"
-                  >one of the kindest people I know</span
-                >
-                <span class="opinion-cloud">effortlessly warm</span>
-                <span class="opinion-cloud"
-                  >has a beautiful way with people</span
-                >
-                <span class="opinion-cloud">so easy to talk to</span>
-                <span class="opinion-cloud">makes kindness feel natural</span>
-                <span class="opinion-cloud">makes you feel safe</span>
-                <span class="opinion-cloud">unbelievably sincere</span>
+          <div class="profile-side">
+            <!-- Spotify -->
+            <aside class="spotify-card" aria-label="Spotify section">
+              <h2>Now Playing</h2>
+              <div class="spotify-embed">
+                <iframe
+                  data-testid="embed-iframe"
+                  style="border-radius: 12px"
+                  src="https://open.spotify.com/embed/playlist/6n3cqYiRn6ES6E2c1ADDNl?utm_source=generator&theme=0&si=0ee7dfe12ea64edd"
+                  width="75%"
+                  height="152"
+                  frameborder="0"
+                  allowfullscreen=""
+                  allow="
+                    autoplay;
+                    clipboard-write;
+                    encrypted-media;
+                    fullscreen;
+                    picture-in-picture;
+                  "
+                  loading="lazy"
+                ></iframe>
               </div>
-            </section>
-          </aside>
+            </aside>
+
+            <div class="demo-wrap">
+              <section
+                class="opinions-section"
+                aria-label="What people think of Jay"
+              >
+                <h3>What people think of me</h3>
+                <div class="opinion-clouds">
+                  <span class="opinion-cloud">emotionally intelligent</span>
+                  <span class="opinion-cloud">deeply thoughtful</span>
+                  <span class="opinion-cloud">makes you feel seen</span>
+                  <span class="opinion-cloud">comforting to be around</span>
+                  <span class="opinion-cloud">genuinely kind-hearted</span>
+                  <span class="opinion-cloud">appreciative</span>
+                  <span class="opinion-cloud">compassionate</span>
+                  <span class="opinion-cloud"
+                    >one of the kindest people I know</span
+                  >
+                  <span class="opinion-cloud">effortlessly warm</span>
+                  <span class="opinion-cloud"
+                    >has a beautiful way with people</span
+                  >
+                  <span class="opinion-cloud">so easy to talk to</span>
+                  <span class="opinion-cloud">makes kindness feel natural</span>
+                  <span class="opinion-cloud">makes you feel safe</span>
+                  <span class="opinion-cloud">unbelievably sincere</span>
+                </div>
+              </section>
+            </div>
+          </div>
         </div>
       </section>
     </main>
@@ -615,7 +651,7 @@
     </button>
     <audio id="bgMusic" loop preload="auto" muted>
       <source
-        src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"
+        src="https://playback.media-streaming.soundcloud.cloud/fToCvDgMh4QG/aac_160k/484aab00-6368-4834-ab1e-f9c930b238ad/playlist.m3u8?expires=1783907160&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wbGF5YmFjay5tZWRpYS1zdHJlYW1pbmcuc291bmRjbG91ZC5jbG91ZC9mVG9DdkRnTWg0UUcvYWFjXzE2MGsvNDg0YWFiMDAtNjM2OC00ODM0LWFiMWUtZjljOTMwYjIzOGFkL3BsYXlsaXN0Lm0zdTg~ZXhwaXJlcz0xNzgzOTA3MTYwIiwiQ29uZGl0aW9uIjp7IkRhdGVMZXNzVGhhbiI6eyJBV1M6RXBvY2hUaW1lIjoxNzgzOTAwMDgwfX19XX0_&Signature=CTLUdf92NtiY4HFZO-K5P1YD1SgXi3qTDn2gEaIcyOlzw9SA58MTvC5iifKPSubkax86WiCq5mt-jSUh4LFBvxl3WElKAdB7TvAm3eC~OMANUeDEQSIWbOrsjTVVATEeqeUaYmPXNd1oQubBjGWSmjv0Y8QMm4o9GQFTO8ZbkOmtHkUnjddjoxWy1LIQXlaOEnQkXx6MPWYGkJM5EAGnJN8D7alMtZ5pW39JBxUhWU3KKVgqChgTjAjgWGCX1R4P2K35~Q-rLqTwPdByrwqaPVL9F3ClI7e6LNqTm40ahVOY-M33dLuMW3og8dFY659-I5E~V-OUzMIzvoV14LCm7w__&Key-Pair-Id=K34606QXLEIRF3"
         type="audio/mpeg"
       />
     </audio>
@@ -664,6 +700,10 @@
         }
       });
 
+      // Source - https://stackoverflow.com/a/79980150
+      // Posted by Ietu
+      // Retrieved 2026-07-13, License - CC BY-SA 4.0
+
       function initOpinionFlow() {
         if (animationFrameId) {
           cancelAnimationFrame(animationFrameId);
@@ -671,77 +711,123 @@
 
         const areaWidth = opinionArea.clientWidth;
         const areaHeight = opinionArea.clientHeight;
-        const laneGap = 56;
-        const laneCount = Math.max(
-          3,
-          Math.min(5, Math.floor((areaHeight - 24) / laneGap) + 1),
-        );
-        const lanes = Array.from(
-          { length: laneCount },
-          (_, index) => 20 + index * laneGap,
-        );
 
-        const bubbles = opinionClouds.map((cloud, index) => ({
-          el: cloud,
-          lane: index % lanes.length,
+        const MIN_GAP = 28; // how much horizontal gap to leave between the bubbles in one lane
+        const MAX_DRIFT = 6; // how much each bubble can "drift" up and down.
+        // But NOTE, this is only the spacing "budget", the actual drift is 3 + (index % 3), which maxes at 5
+
+        // first measure every bubble up front so lane spacing accounts for the real size of bubble
+        const bubbles = opinionClouds.map((el, index) => ({
+          el,
+          width: el.offsetWidth,
+          height: el.offsetHeight,
+          lane: 0,
           x: 0,
-          y: lanes[index % lanes.length],
-          speed: 0.45 + (index % 4) * 0.07,
-          drift: 3 + (index % 3) * 2,
+          drift: 3 + (index % 3),
           phase: index * 0.95,
-          width: 0,
-          height: 0,
-          reentryOffset: 36 + index * 48,
+          speed: 0,
         }));
 
-        function resetBubble(bubble) {
-          bubble.width = bubble.el.offsetWidth;
-          bubble.height = bubble.el.offsetHeight;
-          bubble.x = areaWidth + bubble.reentryOffset;
-          bubble.y = lanes[bubble.lane];
+        const maxHeight = Math.max(...bubbles.map((b) => b.height));
+
+        // lane pitch = bubble height + the full drift range + a little breathing room
+        // so vertically adjacent bubbles can never touch top to bottom even at the edge of the drift
+        const lanePitch = maxHeight + MAX_DRIFT * 2 + 6;
+        const laneCount = Math.max(
+          1,
+          Math.floor((areaHeight - 20) / lanePitch),
+        );
+
+        // center the lane stack vertically: split the leftover space between
+        // top and bottom (lanePitch already pads below the last bubble, so
+        // drop one MAX_DRIFT to make the visual gaps match)
+        const stackHeight = laneCount * lanePitch - MAX_DRIFT;
+        const topOffset = (areaHeight - stackHeight) / 2;
+
+        const laneTops = Array.from(
+          { length: laneCount },
+          (_, i) => topOffset + i * lanePitch + MAX_DRIFT,
+        );
+
+        // One speed per lane so bubbles sharing a lane all move at the same speed,
+        // so the gap between them never shrinks and one can never catch the one ahead
+        const laneSpeeds = Array.from(
+          { length: laneCount },
+          (_, i) => 0.25 + ((i * 2) % laneCount) * 0.08,
+        ); // To change the speed here, change 0.25
+
+        // Get the rightmost occupied edge of each lane
+        function laneTail(lane) {
+          let tail = -Infinity;
+          for (const b of bubbles) {
+            if (b.lane === lane) tail = Math.max(tail, b.x + b.width);
+          }
+          return tail;
         }
 
-        function animate(now) {
-          const height = opinionArea.clientHeight;
-
-          bubbles.forEach((bubble) => {
-            if (!bubble.width || !bubble.height) {
-              bubble.width = bubble.el.offsetWidth;
-              bubble.height = bubble.el.offsetHeight;
+        // Find the lane where the last bubble is furthest left, placing
+        // a bubble there packs the board evenly instead of leaving random holes
+        function emptiestLane() {
+          let best = 0;
+          let bestTail = Infinity;
+          for (let i = 0; i < laneCount; i++) {
+            const t = laneTail(i);
+            if (t < bestTail) {
+              bestTail = t;
+              best = i;
             }
+          }
+          return best;
+        }
+
+        function respawn(bubble) {
+          const lane = emptiestLane();
+          bubble.lane = lane;
+          bubble.speed = laneSpeeds[lane];
+          // Never spawn a bubble closer than MIN_GAP behind the lanes last bubble and
+          // always offscreen, a little jitter keeps the rhythm from looking too "mechanical"
+          bubble.x = Math.max(
+            areaWidth + 10,
+            laneTail(lane) + MIN_GAP + Math.random() * 60,
+          );
+        }
+
+        // Initially fill bubbles left to right across the lanes so the
+        // board starts full instead of it starting the stream in from a empty state
+        bubbles.forEach((bubble) => {
+          const lane = emptiestLane();
+          const tail = laneTail(lane);
+          bubble.lane = lane;
+          bubble.speed = laneSpeeds[lane];
+          bubble.x =
+            (tail === -Infinity ? Math.random() * 40 : tail + MIN_GAP) +
+            Math.random() * 30;
+        });
+
+        function animate(now) {
+          bubbles.forEach((bubble) => {
+            bubble.x -= bubble.speed;
 
             if (bubble.x < -bubble.width - 24) {
-              resetBubble(bubble);
+              respawn(bubble);
             }
 
-            bubble.x -= bubble.speed;
-            bubble.y =
-              lanes[bubble.lane] +
+            const y =
+              laneTops[bubble.lane] +
               Math.sin(now * 0.0012 + bubble.phase) * bubble.drift;
 
-            bubble.y = Math.max(
-              10,
-              Math.min(height - bubble.height - 10, bubble.y),
-            );
             bubble.el.style.left = `${bubble.x}px`;
-            bubble.el.style.top = `${bubble.y}px`;
+            bubble.el.style.top = `${y}px`;
           });
 
           animationFrameId = requestAnimationFrame(animate);
         }
 
-        bubbles.forEach(resetBubble);
         animationFrameId = requestAnimationFrame(animate);
       }
 
-      window.addEventListener('load', () => {
-        setMuted(true);
-        initOpinionFlow();
-      });
-
-      window.addEventListener('resize', () => {
-        initOpinionFlow();
-      });
+      window.addEventListener('load', initOpinionFlow);
+      window.addEventListener('resize', initOpinionFlow);
     </script>
   </body>
 </html>
