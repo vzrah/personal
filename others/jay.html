@@ -674,8 +674,11 @@ https://assets.anytourl.com/uploads/babec807acf93fa0e706acba89aeab5b.mp3"
       const opinionArea = document.querySelector('.opinion-clouds');
       let animationFrameId = null;
 
-      // Start unmuted
+      // Start unmuted and play audio
       setMuted(false);
+      audio.play().catch(() => {
+        // Autoplay may be blocked by browser policy
+      });
 
       function setMuted(isMuted) {
         audio.muted = isMuted;
